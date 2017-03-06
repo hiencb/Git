@@ -1,0 +1,11 @@
+git log --graph --decorate
+git rebase --onto <new_parent> <old_parent> <rebased_branch>
+
+git pull <repo> <branch>
+
+Branch
+  git checkout <branch_name> : switch branch
+  git checkout -b <new_branch> : Create new branch
+  git branch -d <branch_name> : delete a branch
+  git branch -m <new_name> : rename current branch
+  git branch -m <old_name> <new_name> : rename a branch

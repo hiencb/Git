@@ -1,0 +1,60 @@
+Creating a new branch
+$ git branch <branchname>
+Ex: $ git branch feature-1
+View log: $ git log --oneline --decorate
+
+
+Switching branches
+$ git checkout <branchname>
+Ex: $ git checkout feature-1
+View log: $ git log --oneline --decorate
+
+
+Creating a branch and switching to it at the same time
+$ git checkout -b <branchname>
+This is shorthand for:
+$ git branch <branchname>
+$ git checkout <branchname>
+Ex: $ git checkout -b bug-1
+View log: $ git log --oneline --decorate
+
+
+Basic merging
+$ git merge <branchname>
+Ex: $ git merge feature-1
+View log: $ git log --oneline --decorate --graph --all
+
+
+Listing branches
+$ git branch
+OPTIONS:
+       -r, --remotes
+           List or delete (if used with -d) the remote-tracking branches.
+
+       -a, --all
+           List both remote-tracking branches and local branches.
+
+       --list
+           Activate the list mode.  git branch <pattern> would try to create a branch, use git branch --list <pattern> to list matching branches.
+
+       -v, -vv, --verbose
+           When in list mode, show sha1 and commit subject line for each head, along with relationship to upstream branch (if any). If given twice, print the name of the upstream branch, as well (see also git
+remote show <remote>).
+
+       --merged [<commit>]
+           Only list branches whose tips are reachable from the specified
+           commit (HEAD if not specified). Implies --list.
+
+       --no-merged [<commit>]
+           Only list branches whose tips are not reachable from the specified
+           commit (HEAD if not specified). Implies --list.
+
+
+Deleting branch
+$ git branch -d <branchname>
+Ex: $ git branch -d feature-1
+
+
+Forced deleting branch
+$ git branch -D <branchname>
+Ex: $ git branch -D feature-4
